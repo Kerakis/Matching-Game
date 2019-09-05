@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Rob Upchurch">
+    <link rel="stylesheet" href="css/master.css">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Rubik+Mono+One&display=swap" rel="stylesheet">
+    <title>Jesse "The Body" Ventura's Matching Game</title>
+  </head>
+  <body onload="generateFaces(); currentScore()">
+    <div class="page">
+      <div class="leftImage">
+        <img src="images/Jesse_Ventura.png" alt="Jesse Ventura" id="jesse">
+      </div>
+      <div class="rightImage">
+        <img src="images/jesse2.png" alt="Jesse Ventura" id="jesse2">
+      </div>
+      <div class="textContainer" id="textContainer">
+        <div class="text">
+          <h1 id="header">Let's Play!</h1>
+        </div>
+        <div class="text">
+          <h2 id="score"></h2>
+        </div>
+        <div class="text">
+          <p class="instructions" id="instructions1">Click the image of Jesse Ventura on the left side that is missing from the right side.</p>
+        </div>
+        <div class="text">
+          <p class="instructions" id="instructions2">You have 10 seconds on each round to select the correct image.</p>
+        </div>
+      </div>
+      <div class="gameContainer">
+        <div class="game" id="leftSide" onmouseover="currentLevel()"></div>
+        <div class="game" id="rightSide" onmouseover="currentLevel()"></div>
+      </div>
+      <div id="tickTock"></div>
+      <div id="gameEnd"></div>
+    </div>
+    <script src="matching.js"></script>
+  </body>
+</html>

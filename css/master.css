@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+
+img {
+  position: absolute;
+}
+
+.game {
+  position: relative;
+  height: 500px;
+  width: 500px;
+  overflow: hidden;
+}
+
+.gameContainer {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+  margin: 20px;
+  padding: 50px;
+  height: 600px;
+  background-image: url(images/jessebg.jpg);
+  background-color: black;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 3px dotted white;
+  border-radius: 15px;
+}
+
+.page {
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text {
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.textContainer {
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+
+#gameEnd {
+  display: flex;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  justify-content: center;
+}
+
+#header, #score {
+  font-family: 'Bungee Shade', cursive;
+}
+
+#instructions1, #instructions2 {
+  font-family: 'Rubik Mono One', sans-serif;
+  font-size: 20px;
+}
+
+#jesse {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  height: 300px;
+}
+
+#jesse2 {
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  height: 500px;
+}
+
+/* Styles are defined here and copied to the right side to prevent duplicate overlays */
+#leftSide {
+  border: 1px solid white;
+  border-radius: 15px;
+  background-image: url(images/bg.png);
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+#rightSide {
+  margin-left: 50px;
+}
+
+#tickTock {
+  color: white;
+  position: absolute;
+  display: flex;
+  top: 0px;
+  right: 0px;
+  font-family: 'Bungee Shade', cursive;
+  font-size: 3em;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 1200px) {
+
+  .gameContainer {
+    transform: scale(0.75);
+  }
+
+  #instructions1, #instructions2 {
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size: 12px;
+  }
+
+  #tickTock {
+    font-size: 3em;
+  }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 1201px) {
+
+  #tickTock {
+    font-size: 5em;
+  }
+}
