@@ -28,7 +28,7 @@ img {
   margin: 20px;
   padding: 50px;
   height: 600px;
-  background-image: url(images/jessebg.jpg);
+  background-image: url(../images/gamebg.jpg);
   background-color: black;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -59,6 +59,21 @@ img {
   align-items: center;
   flex-direction: column;
   color: white;
+}
+
+#death {
+  border-right: 3px dotted white;
+  border-bottom: 3px dotted white;
+  border-bottom-right-radius: 15px;
+}
+
+#deathScene {
+  position: absolute;
+  display: flex;
+  top: 0px;
+  left: 0px;
+  width: 401px;
+  height: 214px;
 }
 
 #gameEnd {
@@ -96,7 +111,7 @@ img {
 #leftSide {
   border: 1px solid white;
   border-radius: 15px;
-  background-image: url(images/bg.png);
+  background-image: url(../images/bg.png);
   background-repeat: repeat;
   background-size: cover;
 }

@@ -3,6 +3,7 @@ var theLeftSide = document.getElementById("leftSide");
 var theRightSide = document.getElementById("rightSide");
 var theBody = document.getElementsByTagName("body")[0];
 var gameEnd = document.getElementById("gameEnd");
+var deathScene = document.getElementById("deathScene");
 var topText = document.getElementById("instructions1");
 var bottomText = document.getElementById("instructions2");
 var displayTimer = document.getElementById("tickTock");
@@ -100,6 +101,12 @@ theBody.onclick = function gameOver() {
     location.reload();
   };
   gameEnd.appendChild(gameOver);
+
+  // Display the Death Scene gif
+  var doom = document.createElement("img");
+  doom.src = "images/jessedeath.gif";
+  doom.id = "death";
+  deathScene.appendChild(doom);
 };
 
 // Game over if the user doesn't choose the correct answer in the allotted time
@@ -124,11 +131,18 @@ var timer = setInterval(function() {
 
     // Display the Game Over gif and create a link to restart the game
     var gameOver = document.createElement("img");
-    gameOver.src = "gameover.gif";
+    gameOver.src = "images/gameover.gif";
     gameOver.onclick = function() {
       location.reload();
     };
     gameEnd.appendChild(gameOver);
+
+    // Display the Death Scene gif
+    var doom = document.createElement("img");
+    doom.src = "images/jessedeath.gif";
+    doom.id = "death";
+    deathScene.appendChild(doom);
+
   } else {
     displayTimer.innerHTML = "00:" + seconds.toString().padStart(2, '0');
     seconds--;
