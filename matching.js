@@ -67,6 +67,9 @@ function generateFaces() {
     // Keep track of current score, which are meaningless and arbitrarily large numbers
     score = Math.pow(level, 4) * Math.pow(8, level);
     currentScore();
+
+    // Play audio file
+    document.getElementById("ding").play();
   };
 
   // Reset the timer on correct answer
@@ -107,6 +110,9 @@ theBody.onclick = function gameOver() {
   doom.src = "images/jessedeath.gif";
   doom.id = "death";
   deathScene.appendChild(doom);
+
+  // Play audio file
+  document.getElementById("wompwomp").play();
 };
 
 // Game over if the user doesn't choose the correct answer in the allotted time
@@ -142,6 +148,9 @@ var timer = setInterval(function() {
     doom.src = "images/jessedeath.gif";
     doom.id = "death";
     deathScene.appendChild(doom);
+
+    // Play audio file
+    document.getElementById("wompwomp").play();
 
   } else {
     displayTimer.innerHTML = "00:" + seconds.toString().padStart(2, '0');
